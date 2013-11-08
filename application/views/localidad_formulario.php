@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<?=base_url()?>js/bootstrap.min.js"></script>
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -10,29 +10,30 @@
   </head>
   <body>
     <form action="localidad_formulario.php" method="post">
-    <center>
+    
+      <h2>Formulario de Registro Localidad</h2>
 
-    <h2>Formulario de Registro Localidad</h2>
-
-    </center>    
       <fieldset width="75%">
     
         <legend>Introduzca los Datos</legend>
 
-        <p>      
-          <label>Estado: <br/>
-          <input  id="estado" name"Estado:" type="text" name="Estado:" placeholder="Ingrese Estado..."
+        <div>      
+        <br> <label>Estado: </br>
+          <input  id="estado" name"localidad[estado]" type="text" name="localidad[estado]" placeholder="Ingrese Estado..."
                         autofocus required size="50">
           </label>
-        </p>
-        <p>      
-          <label>Localidad: <br/>
-          <input  id="nom_localidad" name"Nombre Localidad:" type="text" name="Nombre Laocalidad:" placeholder="Ingrese Nombre"
+        </div>
+        
+        <div>    
+        <br> <label>Localidad: </br>
+          <input  id="nom_localidad" name"localidad[nombre]" type="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
                         autofocus required size="50">
           </label>
-        </p>
-    <center> <input type="submit" value="Enviar Datos"> </center>
+        </div>
 
+        <div>
+        <br><input type="submit" value="Enviar Datos"></br>
+        </div>
       </fieldset> 
 
   </form>
