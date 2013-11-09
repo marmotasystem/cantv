@@ -19,15 +19,15 @@
 
         <div>      
         <br> <label>Estado: </br>
-          <input  id="estado" name"localidad[estado]" type="text" name="localidad[estado]" placeholder="Ingrese Estado..."
-                        autofocus required size="50">
+          <input  id="estado" type="text" name="localidad[estado]" placeholder="Ingrese Estado..."
+                  required size="50">
           </label>
         </div>
         
         <div>    
         <br> <label>Localidad: </br>
-          <input  id="nom_localidad" name"localidad[nombre]" type="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
-                        autofocus required size="50">
+          <input  id="nom_localidad" ype="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
+                  required size="50">
           </label>
         </div>
 
