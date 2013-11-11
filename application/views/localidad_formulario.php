@@ -13,7 +13,7 @@
     
       <h2>Formulario de Registro Localidad</h2>
 
-      <fieldset width="75%">
+      <fieldset width="80%">
     
         <legend>Introduzca los Datos</legend>
 
@@ -26,8 +26,8 @@
         
         <div>    
         <br> <label>Localidad: </br>
-          <input  id="nom_localidad" ype="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
-                  required size="50">
+          <input  id="nom_localidad" type="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
+                  required size="50"
           </label>
         </div>
 
