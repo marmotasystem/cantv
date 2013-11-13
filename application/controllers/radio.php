@@ -15,7 +15,9 @@ class Radio extends CI_Controller {
 
   public function create()
   {
-    
+    $datos = $this->input->post('radio');
+    $radio = Radio::create($datos);
+
   }
 
   public function edit()

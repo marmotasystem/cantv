@@ -15,7 +15,9 @@ class Interfaz extends CI_Controller {
 
   public function create()
   {
-    
+    $datos = $this->input->post('interfaz');
+    $interfaz = Interfaz::create($datos);
+
   }
 
   public function edit()
