@@ -9,31 +9,25 @@
     <link rel="stylesheet" href="<?=base_url()?>css/bootstrap.min.css">
   </head>
   <body>
-    <?php echo form_open('localidad/create');?>
+    <?php echo form_open('radio/create');?>
     
-      <h2>Formulario de Registro Localidad</h2>
+      <h2>Formulario de Registro Radio</h2>
 
-      <fieldset width="80%">
+      <fieldset width="75%">
     
         <legend>Introduzca los Datos</legend>
 
         <div>      
-        <br> <label>Estado: </br>
-          <input  id="estado" type="text" name="localidad[estado]" placeholder="Ingrese Estado..."
+        <br> <label>Radio: </br>
+          <input  id="nom_radio" type="text" name="radio[radio]" placeholder="Ingrese Nombre..."
                   required size="50">
-          </label>
-        </div>
-        
-        <div>    
-        <br> <label>Localidad: </br>
-          <input  id="nom_localidad" type="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
-                  required size="50"
           </label>
         </div>
 
         <div>
         <br><input type="submit" value="Enviar Datos"></br>
         </div>
+         
       </fieldset> 
 
   </body>

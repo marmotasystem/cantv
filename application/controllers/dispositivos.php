@@ -12,4 +12,19 @@ class Dispositivos extends CI_Controller {
     $this->load->helper('form');
     $this->load->view('dispositivos_formulario');
   }
+
+  public function create()
+  {
+    
+  }
+
+  public function edit()
+  {
+    
+  }
+
+  public function update()
+  {
+    
+  }
 }

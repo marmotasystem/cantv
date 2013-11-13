@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="<?=base_url()?>css/bootstrap.min.css">
   </head>
   <body>
-    <form action="dispositivos_formulario.php" method="post">
-    
-      <h2>Formulario de Registro Dispositivos</h2>
+
+<?php echo form_open('dispositivos/create');?>
+
+  <h2>Formulario de Registro Dispositivos</h2>
 
       <fieldset width="75%">
     
@@ -19,7 +20,8 @@
 
         <div>      
         <br> <label>Dispositivo: </br>
-          <input  id="nom_dispositivos" type="text" name="dispositivos[nombre]" placeholder="Ingrese Nombre..."
+          <input  id="nom_dispositivos" type="text" name="dispositivos[nombre]" 
+                  placeholder="Ingrese Nombre..."
                   required size="50">
           </label>
         </div>
@@ -52,6 +54,5 @@
         </div>
       </fieldset> 
 
-  </form>
   </body>
 </html>

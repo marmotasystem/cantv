@@ -12,4 +12,19 @@ class Radio extends CI_Controller {
     $this->load->helper('form');
     $this->load->view('radio_formulario');
   }
+
+  public function create()
+  {
+    
+  }
+
+  public function edit()
+  {
+    
+  }
+
+  public function update()
+  {
+    
+  }
 }
