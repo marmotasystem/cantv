@@ -5,8 +5,13 @@ class Localidad extends CI_Model
   private $atributos;
   private static $db;
 
-  public function static create($params)
+  public function __construct()
+  {
+    parent::__construct();
+    self::$db = &get_instance()->db;
+  }
 
+  public function static create($params)
   {
    $this->db->insert('Localidades', $params);
   }
