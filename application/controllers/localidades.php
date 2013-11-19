@@ -6,6 +6,7 @@ class Localidades extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    self::$db = &get_instance()->db;
   }
 
   public function index()
@@ -14,9 +15,9 @@ class Localidades extends CI_Controller
     $this->load->view('localidad_formulario');
   }
 
-  public function create()
+  public static function create()
   {
-  
+    $this->load->model('Localidad');
     $datos = $this->input->post('localidad');
     $localidad = Localidad::create($datos);
 
