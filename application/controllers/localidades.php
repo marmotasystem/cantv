@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Localidades extends CI_Controller {
+class Localidades extends CI_Controller
+{
 
   public function __construct()
   {
@@ -15,6 +16,7 @@ class Localidades extends CI_Controller {
 
   public function create()
   {
+  
     $datos = $this->input->post('localidad');
     $localidad = Localidad::create($datos);
 

@@ -10,7 +10,7 @@
   </head>
   <body>
     
-    <?php echo form_open('radio/create');?>
+    <?php echo form_open('radios/create');?>
     
       <h2>Formulario de Registro Radio</h2>
 

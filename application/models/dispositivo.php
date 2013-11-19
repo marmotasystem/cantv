@@ -1,4 +1,4 @@
-class Dispositivos
+class Dispositivo
   private $atributos;
 
   public function static create($params)

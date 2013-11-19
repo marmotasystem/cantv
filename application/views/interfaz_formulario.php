@@ -10,7 +10,7 @@
   </head>
   <body>
     
-    <?php echo form_open('interfaz/create');?>
+    <?php echo form_open('interfaces/create');?>
     
       <h2>Formulario de Registro Interfaz</h2>
 
