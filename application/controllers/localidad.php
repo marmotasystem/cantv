@@ -15,7 +15,9 @@ class Localidad extends CI_Controller {
 
   public function create()
   {
-    print_r($this->input->post());
+    $datos = $this->input->post('localidad');
+    $localidad = Localidad::create($datos);
+
   }
 
   public function edit()

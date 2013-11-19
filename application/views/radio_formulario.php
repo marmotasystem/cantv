@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?=base_url()?>css/bootstrap.min.css">
   </head>
   <body>
+    
     <?php echo form_open('radio/create');?>
     
       <h2>Formulario de Registro Radio</h2>
