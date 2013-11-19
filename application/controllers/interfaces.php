@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Radio extends CI_Controller {
+class Interfaces extends CI_Controller {
 
   public function __construct()
   {
@@ -10,13 +10,13 @@ class Radio extends CI_Controller {
   public function index()
   {
     $this->load->helper('form');
-    $this->load->view('radio_formulario');
+    $this->load->view('interfaz_formulario');
   }
 
   public function create()
   {
-    $datos = $this->input->post('radio');
-    $radio = Radio::create($datos);
+    $datos = $this->input->post('interfaz');
+    $interfaz = Interfaz::create($datos);
 
   }
 

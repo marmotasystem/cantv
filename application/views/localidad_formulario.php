@@ -10,7 +10,7 @@
   </head>
   <body>
     
-    <?php echo form_open('localidad/create');?>
+    <?php echo form_open('localidades/create');?>
     
       <h2>Formulario de Registro Localidad</h2>
 
