@@ -21,6 +21,16 @@ class Localidades extends CI_Controller
     $localidad = Localidad::create($datos);
   }
 
+public function estados()
+  {
+    $this->load->model('Estado');
+    print_r(Estado::all());
+    var_dump(Estado::all());
+
+      }
+
+
+
   public function edit()
   {
     

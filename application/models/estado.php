@@ -23,7 +23,7 @@ class Estado extends CI_Model
     }
     foreach ($results as $estado_array)
     {
-      $object = new Estados();
+      $object = new Estado();
       $object->set_nombre($estado_array['nombre']);
       $object->set_id($estado_array['id']);
       $results_objects[] = $object;
