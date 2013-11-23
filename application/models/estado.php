@@ -30,10 +30,19 @@ class Estado extends CI_Model
   }
   public static function all_array()
   {
-    $sql = self::$querys['all']; 
-    return self::run_query($sql);
+    $sql = self::$querys['all'];
+    $array = self::run_query($sql);
+    return self::compress_array($array,'id','nombre');
   }
  
+  private static function compress_array($array,$key,$value){
+    $result = array();
+    foreach ($array as $ar) {
+      $result[$ar[$key]] = $ar[$value];
+    }
+    return $result;
+  }
+  
   private static function run_query($sql){
     $query = self::$db->query($sql);
     $results = array();
