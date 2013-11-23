@@ -17,7 +17,8 @@
           </li>
         </ul>
       </nav>
+      <?php include($vista.'.php'); ?>
     </div>
-    <?php include($vista.'.php'); ?>
+   
   </body>
 </html>
