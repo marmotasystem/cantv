@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="<?=base_url()?>css/bootstrap.min.css">
   </head>
   <body>
+    <div class='container'>
+      <nav>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#"> Localidad </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <?php include($vista.'.php'); ?>
   </body>
 </html>
