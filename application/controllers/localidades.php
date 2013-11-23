@@ -10,16 +10,14 @@ class Localidades extends CI_Controller
 
   public function index(){
     $data = array(
-      'localidades' => Localidad::all()
+      'localidades' => Localidad::all(),
+      'vista' => 'localidad/index'
     );
-    var_dump(Localidad::all());
-//    $this->load->view('layout',$data);
+    $this->load->view('layout',$data);
   }
 
   public function nuevo()
   {
-    $this->load->model('Estado');
-    $this->load->helper('form');
     $data = array(
       'vista' => 'localidad/formulario',
       'estados' => Estado::all_array()
@@ -29,9 +27,9 @@ class Localidades extends CI_Controller
 
   public function create()
   {
-    $this->load->model('Localidad');
     $datos = $this->input->post('localidad');
     $localidad = Localidad::create($datos);
+    redirect('localidad/index');
   }
 
   public function edit()
