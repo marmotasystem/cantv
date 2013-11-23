@@ -33,7 +33,7 @@ class Estado extends CI_Model
 
 
   private static $querys = array(
-    'all' => 'SELECT id,nombre FROM Estados'
+    'all' => 'SELECT id,nombre FROM estados'
   );
 
 }  
