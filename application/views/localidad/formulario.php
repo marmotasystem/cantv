@@ -9,7 +9,7 @@
     </div>      
     <div>    
       <label>Localidad
-        <input id="nom_localidad" type="text" name="localidad[nom_localidad]" placeholder="Ingrese Nombre..." required>
+        <input id="nom_localidad" type="text" name="localidad[nombre]" placeholder="Ingrese Nombre..." required>
       </label>
     </div>
     <div>

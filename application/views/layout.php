@@ -12,13 +12,21 @@
     <div class='container'>
       <nav>
         <ul class="nav nav-tabs">
-          <li class="active">
-            <a href="#"> Localidad </a>
+          <li>
+           <?=  anchor('#', 'Localidad',array('class'=>'dropdown-toggle',"data-toggle"=>"dropdown"));?>
+            <ul class="dropdown-menu">
+              <li> <?=  anchor('localidades/nuevo', 'Nuevo');?> </li>
+            </ul>
+          </li>
+          <li>
+            <?=  anchor('dispositivos/nuevo', 'Dispositivos');?>
+          </li>
+          <li>
+           <?=  anchor('interfaces/nuevo', 'Intefaces');?>
           </li>
         </ul>
       </nav>
       <?php include($vista.'.php'); ?>
     </div>
-   
   </body>
 </html>
