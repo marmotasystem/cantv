@@ -12,7 +12,7 @@ class Localidad extends CI_Model
   }
 
   public function estado(){
-    Estado::find($this->estado_id);
+    return Estado::find($this->estado_id);
   }
 
   /***********
