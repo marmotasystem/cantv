@@ -12,14 +12,14 @@ class Localidades extends CI_Controller
 
   }
 
-  public function new()
+  public function nuevo()
   {
     $this->load->model('Estado');
     $this->load->helper('form');
     $data = array(
       'estados' => Estado::all()
     );
-    $this->load->view('localidad_formulario',array());
+    $this->load->view('localidad_formulario',$data);
   }
 
   public function create()
