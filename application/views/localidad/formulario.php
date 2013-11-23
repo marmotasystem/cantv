@@ -1,10 +1,10 @@
-<?php echo form_open('localidades/create');?>
+<?= form_open('localidades/create');?>
   <h2>Formulario de Registro Localidad</h2>
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
     <div>      
       <label>Estado: </br>
-        <?php echo form_dropdown('localidad[estado_id]', $estados);?>
+        <?= form_dropdown('localidad[estado_id]', $estados);?>
       </label>
     </div>      
     <div>    
