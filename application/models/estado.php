@@ -34,7 +34,7 @@ class Estado extends CI_Model
     return self::run_query($sql);
   }
  
-  private static function run_query(){
+  private static function run_query($sql){
     $query = self::$db->query($sql);
     $results = array();
     foreach ($query->result_array() as $row)
