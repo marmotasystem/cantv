@@ -84,6 +84,11 @@ class Estado extends CI_Model
     $this->atributos[$name] = $value;
   }
 
+  public function __toString()
+  {
+    return $this->atributos['nombre'];
+  }
+
 
   private static $queries = array(
     'all' => 'SELECT id,nombre FROM estados',

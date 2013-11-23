@@ -15,11 +15,6 @@ class Localidad extends CI_Model
     return Estado::find($this->estado_id);
   }
 
-  public function estado_nombre(){
-    $estado = $this->estado();
-    return $estado->nombre;
-  }
-
   /***********
   ** METODOS DE CLASES
   */

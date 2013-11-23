@@ -13,7 +13,7 @@
     <? foreach ($localidades as $localidad) : ?>
       <tr>
         <td> <?= $localidad->nombre ?></td>
-        <td> <?= $localidad->estado_nombre() ?>></td>
+        <td> <?= $localidad->estado() ?> </td>
         <td> Acciones </td>
       </tr>
     <? endforeach ?>
