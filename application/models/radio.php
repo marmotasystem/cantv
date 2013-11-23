@@ -1,4 +1,6 @@
-class Radio
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Radio{
   private $atributos;
 
   public function static create($params)
@@ -7,5 +9,4 @@ class Radio
    $this->db->insert('radio', $params);
   }
 
-  
-end
+}
