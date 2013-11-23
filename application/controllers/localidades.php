@@ -9,7 +9,11 @@ class Localidades extends CI_Controller
   }
 
   public function index(){
-    
+    $data = array(
+      'localidades' => Localidad::all()
+    );
+    var_dump(Localidad::all());
+//    $this->load->view('layout',$data);
   }
 
   public function nuevo()
