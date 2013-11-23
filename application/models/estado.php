@@ -44,8 +44,8 @@ class Estado extends CI_Model
 
   // Carga un objeto con la informacion de un array
   private function load_by_array($array){
-    $this->nombre = $estado_array['nombre'];
-    $this->id = $estado_array['id'];
+    $this->nombre = $array['nombre'];
+    $this->id = $array['id'];
   }
 
 // Consulta en la base de datos, y retorna un array con el formato 'id' => 'nombre'
