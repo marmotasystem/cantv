@@ -9,7 +9,7 @@ class Estado extends CI_Model
   {
     parent::__construct();
     self::$db = &get_instance()->db;
-    $this->$atributos = array();
+    $this->atributos = array();
   }
 
   public static function all()
@@ -25,8 +25,8 @@ class Estado extends CI_Model
     foreach ($results as $estado_array)
     {
       $object = new Estado();
-      $object->nombre($estado_array['nombre']);
-      $object->id($estado_array['id']);
+      $object->nombre=$estado_array['nombre'];
+      $object->id=$estado_array['id'];
       $results_objects[] = $object;
     }
     return $results_objects;
