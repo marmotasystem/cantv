@@ -11,6 +11,14 @@ class Localidad extends CI_Model
     self::$db = &get_instance()->db;
   }
 
+  public function estado(){
+    Estado::find($this->estado_id);
+  }
+
+  /***********
+  ** METODOS DE CLASES
+  */
+
   public static function create($params)
   {
     self::$db->insert('localidades', $params);
@@ -31,22 +39,29 @@ class Localidad extends CI_Model
     return $results_objects;
   }
 
-  public function estado(){
-    Estado::find($this->estado_id);
-  }
-
-  private function load_by_array($array){
-    $this->nombre = $array['nombre'];
-    $this->id = $array['id'];
-    $this->estado_id = $array['estado_id'];
-  }
   public static function all_array()
   {
     $sql = self::$queries['all'];
     $array = self::run_query($sql);
     return self::compress_array($array,'id','nombre');
   }
- 
+
+  // METODOS MAGICOS
+
+  public function __set($name, $value)
+  {
+    $this->atributos[$name] = $value;
+  }
+  public function __get($name)
+  {
+    return $this->atributos[$name];
+  }
+
+  private function load_by_array($array){
+    $this->nombre = $array['nombre'];
+    $this->id = $array['id'];
+    $this->estado_id = $array['estado_id'];
+  } 
   private static function compress_array($array,$key,$value){
     $result = array();
     foreach ($array as $ar) {
@@ -64,15 +79,6 @@ class Localidad extends CI_Model
     }
     return $results;
   }
-  public function __set($name, $value)
-  {
-    $this->atributos[$name] = $value;
-  }
-  public function __get($name)
-  {
-    return $this->atributos[$name];
-  }
-
 
   private static $queries = array(
     'all' => 'SELECT id,nombre,estado_id FROM localidades'
