@@ -9,7 +9,7 @@ class Localidades extends CI_Controller
   }
 
   public function index(){
-
+    
   }
 
   public function nuevo()

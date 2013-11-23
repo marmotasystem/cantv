@@ -13,7 +13,7 @@ class Localidad extends CI_Model
 
   public static function create($params)
   {
-   self::$db->insert('Localidad', $params);
+    self::$db->insert('localidades', $params);
   }
 
 }  
