@@ -27,7 +27,7 @@
         
         <div>    
         <br> <label>Localidad: </br>
-          <input  id="nom_localidad" type="text" name="localidad[nombre]" placeholder="Ingrese Nombre..."
+          <input  id="nom_localidad" type="text" name="localidad[nom_localidad]" placeholder="Ingrese Nombre..."
                   required size="50"
           </label>
         </div>

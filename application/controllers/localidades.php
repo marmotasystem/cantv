@@ -14,7 +14,7 @@ class Localidades extends CI_Controller
     $this->load->view('localidad_formulario');
   }
 
-  public static function create()
+  public function create()
   {
     $this->load->model('Localidad');
     $datos = $this->input->post('localidad');
