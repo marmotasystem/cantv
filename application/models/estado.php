@@ -15,13 +15,9 @@ class Estado extends CI_Model
   public static function all()
   {
     $sql = self::$querys['all']; 
-    $query = self::$db->query($sql);
-    $results = array();
     $results_objects = array();
-    foreach ($query->result_array() as $row)
-    {
-      $results[] = $row;
-    }
+    $results = self::run_query($sql);
+
     foreach ($results as $estado_array)
     {
       $object = new Estado();
@@ -29,9 +25,24 @@ class Estado extends CI_Model
       $object->id=$estado_array['id'];
       $results_objects[] = $object;
     }
+
     return $results_objects;
   }
+  public static function all_array()
+  {
+    $sql = self::$querys['all']; 
+    return self::run_query($sql);
+  }
  
+  private static function run_query(){
+    $query = self::$db->query($sql);
+    $results = array();
+    foreach ($query->result_array() as $row)
+    {
+      $results[] = $row;
+    }
+    return $results;
+  }
   public function __set($name, $value)
   {
     $this->atributos[$name] = $value;

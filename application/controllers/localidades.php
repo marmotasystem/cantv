@@ -17,7 +17,7 @@ class Localidades extends CI_Controller
     $this->load->model('Estado');
     $this->load->helper('form');
     $data = array(
-      'estados' => Estado::all()
+      'estados' => Estado::all_array()
     );
     $this->load->view('localidad_formulario',$data);
   }
