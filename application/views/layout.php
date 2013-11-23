@@ -13,11 +13,18 @@
       <nav>
         <ul class="nav nav-tabs">
           <li class="active">
+           <?=  anchor('localidades/nuevo', 'Localidad');?>
             <a href="#"> Localidad </a>
+          </li>
+          <li>
+            <?=  anchor('dispositivos/nuevo', 'Dispositivos');?>
+          </li>
+          <li>
+           <?=  anchor('interfaces/nuevo', 'Intefaces');?>
           </li>
         </ul>
       </nav>
+      <?php include($vista.'.php'); ?>
     </div>
-    <?php include($vista.'.php'); ?>
   </body>
 </html>
