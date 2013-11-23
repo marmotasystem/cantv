@@ -51,7 +51,7 @@ class Estado extends CI_Model
 // Consulta en la base de datos, y retorna un array con el formato 'id' => 'nombre'
   public static function all_array()
   {
-    $sql = self::$querys['all'];
+    $sql = self::$queries['all'];
     $array = self::run_query($sql);
     return self::compress_array($array,'id','nombre');
   }

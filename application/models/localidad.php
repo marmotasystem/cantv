@@ -18,7 +18,7 @@ class Localidad extends CI_Model
 
   public static function all()
   {
-    $sql = self::$querys['all']; 
+    $sql = self::$queries['all']; 
     $results_objects = array();
     $results = self::run_query($sql);
 
@@ -42,7 +42,7 @@ class Localidad extends CI_Model
   }
   public static function all_array()
   {
-    $sql = self::$querys['all'];
+    $sql = self::$queries['all'];
     $array = self::run_query($sql);
     return self::compress_array($array,'id','nombre');
   }
@@ -74,8 +74,8 @@ class Localidad extends CI_Model
   }
 
 
-  private static $querys = array(
-    'all' => 'SELECT id,nombre,estado_id FROM Localidad'
+  private static $queries = array(
+    'all' => 'SELECT id,nombre,estado_id FROM localidades'
   );
 
 }  
