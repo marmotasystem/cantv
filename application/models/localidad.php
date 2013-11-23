@@ -36,9 +36,9 @@ class Localidad extends CI_Model
   }
 
   private function load_by_array($array){
-    $this->nombre = $estado_array['nombre'];
-    $this->id = $estado_array['id'];
-    $this->estado_id = $estado_array['estado_id'];
+    $this->nombre = $array['nombre'];
+    $this->id = $array['id'];
+    $this->estado_id = $array['estado_id'];
   }
   public static function all_array()
   {
