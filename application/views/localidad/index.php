@@ -14,7 +14,7 @@
       <tr>
         <td> <?= $localidad->nombre ?></td>
         <td> <?= $localidad->estado() ?> </td>
-        <td> Acciones </td>
+        <td> <?= anchor('localidades/editar/'.$localidad->id, "Editar"); ?> </td>
       </tr>
     <? endforeach ?>
   </tbody>
