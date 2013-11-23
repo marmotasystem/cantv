@@ -15,25 +15,19 @@
       <h2>Formulario de Registro Localidad</h2>
 
       <fieldset width="80%">
-    
         <legend>Introduzca los Datos</legend>
-
         <div>      
-        <br> <label>Estado: </br>
-          <input  id="estado" type="text" name="localidad[estado]" placeholder="Ingrese Estado..."
-                  required size="50">
+          <label>Estado: </br>
+            <?php echo form_dropdown('localidad[estado]', $estados);?>
           </label>
-        </div>
-        
+        </div>      
         <div>    
-        <br> <label>Localidad: </br>
-          <input  id="nom_localidad" type="text" name="localidad[nom_localidad]" placeholder="Ingrese Nombre..."
-                  required size="50"
+          <label>Localidad
+            <input id="nom_localidad" type="text" name="localidad[nom_localidad]" placeholder="Ingrese Nombre..." required>
           </label>
         </div>
-
         <div>
-        <br><input type="submit" value="Enviar Datos"></br>
+          <br><input type="submit" value="Enviar Datos"></br>
         </div>
       </fieldset> 
 
