@@ -18,7 +18,7 @@
         <legend>Introduzca los Datos</legend>
         <div>      
           <label>Estado: </br>
-            <?php echo form_dropdown('localidad[estado]', $estados);?>
+            <?php echo form_dropdown('localidad[estado_id]', $estados);?>
           </label>
         </div>      
         <div>    
