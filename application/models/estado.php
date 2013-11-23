@@ -9,7 +9,7 @@ class Estado extends CI_Model
   {
     parent::__construct();
     self::$db = &get_instance()->db;
-    $this->$atributos = array();
+    $this->atributos = array();
   }
 
   public static function all()
