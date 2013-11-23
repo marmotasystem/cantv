@@ -3,7 +3,7 @@
 class Radio{
   private $atributos;
 
-  public function static create($params)
+  public static function create($params)
 
   {
    $this->db->insert('radio', $params);

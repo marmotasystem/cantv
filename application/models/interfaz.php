@@ -2,7 +2,7 @@
 class Interfaz{
   private $atributos;
 
-  public function static create($params)
+  public static function create($params)
 
   {
    $this->db->insert('interfaz', $params);
