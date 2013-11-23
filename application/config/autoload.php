@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url','form','html');
 
 
 /*
@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['models'] = array('Dispositivo', 'Localidad', 'Interfaz', 'Radio');
+$autoload['model'] = array('Dispositivo', 'Localidad', 'Interfaz', 'Radio');
 
 
 /* End of file autoload.php */
