@@ -86,7 +86,6 @@ class Localidad extends CI_Model
   );
 
   public static function find($id){
-    var_dump($id);
     $sql = self::$queries['find']; 
     $results = self::run_query($sql,array($id));
     if( count($results) == 0)
