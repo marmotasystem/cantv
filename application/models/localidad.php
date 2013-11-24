@@ -70,8 +70,8 @@ class Localidad extends CI_Model
     return $result;
   }
   
-  private static function run_query($sql){
-    $query = self::$db->query($sql);
+  private static function run_query($sql,$params = array()){
+    $query = self::$db->query($sql,$params);
     $results = array();
     foreach ($query->result_array() as $row)
     {
@@ -81,7 +81,23 @@ class Localidad extends CI_Model
   }
 
   private static $queries = array(
-    'all' => 'SELECT id,nombre,estado_id FROM localidades'
+    'all' => 'SELECT id,nombre,estado_id FROM localidades',
+    'find' => 'SELECT id,nombre,estado_id FROM localidades WHERE id = ?'
   );
+
+  public static function find($id){
+    var_dump($id);
+    $sql = self::$queries['find']; 
+    $results = self::run_query($sql,array($id));
+    if( count($results) == 0)
+      return false;
+    else
+    {
+      $object = new Localidad();
+      $object->load_by_array($results[0]);
+      return $object;
+    }
+  }
+
 
 }  
