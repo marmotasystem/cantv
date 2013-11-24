@@ -32,7 +32,7 @@ class Localidades extends CI_Controller
     redirect('localidad/index');
   }
 
-  public function edit($id)
+  public function editar($id)
   {
     $data = array(
       'vista' => 'localidad/editar',
