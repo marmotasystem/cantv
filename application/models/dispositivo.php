@@ -44,6 +44,17 @@ class Dispositivo extends CI_Model
 
  // METODOS MAGICOS
 
+  public function __set($name, $value)
+  {
+    $this->atributos[$name] = $value;
+  }
+
+  public function __get($name)
+  {
+    return $this->atributos[$name];
+  }
+
+
   private static function run_query($sql,$params = array())
 
   {
