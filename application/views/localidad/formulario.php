@@ -1,6 +1,5 @@
 <?php $accion = ( $localidad->id != null )? 'actualizar' : 'create' ?>
-<?= form_open('localidades/'.$localidad,'',array('id'=>$localidad->id));?>    
-  <h2>Formulario de Registro Localidad</h2>
+<?= form_open('localidades/'.$accion,'',array('localidad[id]'=>$localidad->id));?>    
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
     <div>      
@@ -14,7 +13,7 @@
       </label>
     </div>
     <div>
-      <br><input type="submit" value="Enviar Datos"></br>
+      <br><input class='btn btn-success' type="submit" value="Enviar Datos"></br>
     </div>
   </fieldset> 
 </form>

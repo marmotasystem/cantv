@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dispositivos extends CI_Controller {
+class Dispositivos extends CI_Controller
+{
 
   public function __construct()
   {
@@ -9,24 +10,39 @@ class Dispositivos extends CI_Controller {
 
   public function index()
   {
-    $this->load->helper('form');
-    $this->load->view('dispositivos_formulario');
+    $data = array(
+      'dispositivo' => Dispositivo::all(),
+      'vista' => 'dispositivo/index'
+    );
+    $this->load->view('layout',$data);
+  }
+
+  public function nuevo()
+  {
+    $data = array(
+      'vista' => 'dispositivo/nuevo',
+     // 'estados' => Estado::all_array(),
+      'dispositivos' => new Dispositivo()
+    );
+    $this->load->view('layout',$data);
   }
 
   public function create()
   {
     $datos = $this->input->post('dispositivos');
-    $dispositivos = Dispositivos::create($datos);
-
+    $dispositivo = Dispositivo::create($datos);
+    redirect('dispositivos/index');
   }
 
-  public function edit()
+  public function editar($id)
   {
     
   }
 
-  public function update()
+  public function actualizar()
   {
     
   }
+
+  
 }

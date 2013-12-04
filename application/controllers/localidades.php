@@ -20,7 +20,8 @@ class Localidades extends CI_Controller
   {
     $data = array(
       'vista' => 'localidad/nuevo',
-      'estados' => Estado::all_array()
+      'estados' => Estado::all_array(),
+      'localidad' => new Localidad()
     );
     $this->load->view('layout',$data);
   }
@@ -29,7 +30,7 @@ class Localidades extends CI_Controller
   {
     $datos = $this->input->post('localidad');
     $localidad = Localidad::create($datos);
-    redirect('localidad/index');
+    redirect('localidades/index');
   }
 
   public function editar($id)
@@ -42,9 +43,12 @@ class Localidades extends CI_Controller
     $this->load->view('layout',$data);
   }
 
-  public function update()
+  public function actualizar()
   {
-    
+    $datos = $this->input->post('localidad');
+    $localidad = Localidad::actualizar($datos);
+    redirect('localidades/index');
   }
 
+  
 }

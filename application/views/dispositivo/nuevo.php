@@ -1,5 +1,5 @@
 <h1>
-  Editar Localidad
+  Creacion de nuevo Dispositivo
 </h1>
 
 <? include('formulario.php') ?>

@@ -1,7 +1,7 @@
 <h1>
-  Listado de localidades
+  Listado de Localidades
 </h1>
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Nombre </th>

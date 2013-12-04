@@ -11,7 +11,8 @@ class Localidad extends CI_Model
     self::$db = &get_instance()->db;
   }
 
-  public function estado(){
+  public function estado()
+  {
     return Estado::find($this->estado_id);
   }
 
@@ -22,6 +23,13 @@ class Localidad extends CI_Model
   public static function create($params)
   {
     self::$db->insert('localidades', $params);
+  }
+
+  public static function actualizar($params)
+  {
+    self::$db->where('id', $params['id']);
+    self::$db->update('localidades', $params);
+      
   }
 
   public static function all()

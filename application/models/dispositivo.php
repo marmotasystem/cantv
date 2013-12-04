@@ -1,8 +1,47 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Dispositivo{
+
+class Dispositivo extends CI_Model
+{
   private $atributos;
+  private static $db;
+
+  public function __construct()
+  {
+    parent::__construct();
+    self::$db = &get_instance()->db;
+  }
+
+  /***********
+  ** METODOS DE CLASES
+  */
+
   public static function create($params)
   {
-   $this->db->insert('dispositivos', $params);
+    self::$db->insert('dispositivos', $params);
   }
+
+  public static function actualizar($params)
+  {
+    self::$db->where('id', $params['id']);
+    self::$db->update('dispositivos', $params);
+  }   
+
+  public static function all()
+  {
+    $sql = self::$queries['all']; 
+    $results_objects = array();
+    $results = self::run_query($sql);
+
+    foreach ($results as $dispositivo_array)
+    {
+      $object = new Dispositivo();
+      $object->load_by_array($dispositvo_array);
+      $results_objects[] = $object;
+    }
+    return $results_objects;
+  }
+
+  private static $queries = array(
+    'all' => 'SELECT id,nombre,ip_adress,modelo,proveedor FROM dispositivos',
+  );
 }

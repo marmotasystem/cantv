@@ -1,5 +1,5 @@
 <h1>
-  Editar Localidad
+  Editar Dispositivo
 </h1>
 
 <? include('formulario.php') ?>

@@ -1,5 +1,5 @@
 <h1>
-  Creacion de nueva localidad
+  Creacion de nueva Localidad
 </h1>
 
 <? include('formulario.php') ?>
