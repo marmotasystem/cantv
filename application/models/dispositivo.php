@@ -9,6 +9,7 @@ class Dispositivo extends CI_Model
   {
     parent::__construct();
     self::$db = &get_instance()->db;
+    $this->atributos = array();
   }
 
   /***********
@@ -39,9 +40,23 @@ class Dispositivo extends CI_Model
       $results_objects[] = $object;
     }
     return $results_objects;
+    }
+
+ // METODOS MAGICOS
+
+  private static function run_query($sql,$params = array())
+
+  {
+    $query = self::$db->query($sql,$params);
+    $results = array();
+    foreach ($query->result_array() as $row)
+    {
+      $results[] = $row;
+    }
+    return $results;
   }
 
   private static $queries = array(
-    'all' => 'SELECT id,nombre,ip_adress,modelo,proveedor FROM dispositivos',
+    'all' => 'SELECT id,nombre,ip_address,modelo,proveedor FROM dispositivos',
   );
 }

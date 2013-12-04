@@ -1,5 +1,5 @@
 <?php $accion = ( $dispositivo->id != null )? 'actualizar' : 'create' ?>
-<?= form_open('dispositivos/'.$accion,'',array('dispositivos[id]'=>$dispositivo->id));?> 
+<?= form_open('dispositivos/'.$accion,'',array('dispositivo[id]'=>$dispositivo->id));?> 
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
 

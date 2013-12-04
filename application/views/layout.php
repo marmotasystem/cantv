@@ -27,7 +27,7 @@
             </ul>  
           </li>
           <li>
-           <?=  anchor('interfaces/nuevo', 'Intefaces');?>
+           <?=  anchor('interfaces/nuevo', 'Interfaces');?>
           </li>
         </ul>
       </nav>

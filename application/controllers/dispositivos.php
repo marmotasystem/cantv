@@ -22,7 +22,7 @@ class Dispositivos extends CI_Controller
     $data = array(
       'vista' => 'dispositivo/nuevo',
      // 'estados' => Estado::all_array(),
-      'dispositivos' => new Dispositivo()
+      'dispositivo' => new Dispositivo()
     );
     $this->load->view('layout',$data);
   }
