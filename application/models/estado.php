@@ -84,6 +84,11 @@ class Estado extends CI_Model
     $this->atributos[$name] = $value;
   }
 
+  public function __get($name)
+  {
+    return $this->atributos[$name];
+  }
+
   public function __toString()
   {
     return $this->atributos['nombre'];

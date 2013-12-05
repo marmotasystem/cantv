@@ -12,12 +12,12 @@
     </tr>
   </thead>
   <tbody>
-    <? foreach ($dispositivos as $dispositivo) : ?>
+    <? foreach ($dispositivo as $dispositivos) : ?>
       <tr>
-        <td> <?= $dispositivo->nombre ?></td>
-        <td> <?= $dispositivo->ip_address ?> </td>
-        <td> <?= $dispositivo->modelo ?> </td>
-        <td> <?= $dispositivo->proveedor ?> </td>
+        <td> <?= $dispositivos->nombre ?></td>
+        <td> <?= $dispositivos->ip_address ?> </td>
+        <td> <?= $dispositivos->modelo ?> </td>
+        <td> <?= $dispositivos->proveedor ?> </td>
 
         <td> <?= anchor('dispositivos/editar/'.$dispositivos->id, "Editar"); ?> </td>
       </tr>

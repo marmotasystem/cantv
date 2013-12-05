@@ -10,6 +10,24 @@
     </div>
 
     <div>
+      <label>Dispositivo:
+        <input id="nombre" type="text" name="dispositivos[nombre]" placeholder="Ingrese Nombre..." required value="<?= $dispositivo->nombre?>">
+      </label>
+    </div>
+
+    <div>
+      <label>Modelo:
+        <input id="modelo" type="text" name="dispositivos[modelo]" placeholder="Ingrese Modelo..." required value="<?= $dispositivo->modelo?>">
+      </label>
+    </div>
+
+    <div>
+      <label>Proveedor:
+        <input id="proveedor" type="text" name="dispositivos[proveedor]" placeholder="Ingrese Proveedor..." required value="<?= $dispositivo->proveedor?>">
+      </label>
+    </div>
+
+    <div>
       <br><input class='btn btn-success' type="submit" value="Enviar Datos"></br>
     </div>
   </fieldset> 

@@ -36,13 +36,21 @@ class Dispositivos extends CI_Controller
 
   public function editar($id)
   {
-    
+    $data = array(
+      'vista' => 'dispostivo/editar',
+      //'estados' => Estado::all_array(),
+      'dispositivo' => Dispositivo::find($id)
+    );
+    $this->load->view('layout',$data);
   }
 
   public function actualizar()
   {
-    
+    $datos = $this->input->post('dispositivos');
+    $dispositivo = Dispositivo::actualizar($datos);
+    redirect('dispositivos/index');
   }
+
 
   
 }

@@ -36,7 +36,7 @@ class Dispositivo extends CI_Model
     foreach ($results as $dispositivo_array)
     {
       $object = new Dispositivo();
-      $object->load_by_array($dispositvo_array);
+      $object->load_by_array($dispositivo_array);
       $results_objects[] = $object;
     }
     return $results_objects;
@@ -51,9 +51,18 @@ class Dispositivo extends CI_Model
 
   public function __get($name)
   {
-    return $this->atributos[$name];
+    if (array_key_exists($name,$this->atributos))
+      return $this->atributos[$name];
+    else
+      return null;
   }
 
+  private function load_by_array($array){
+    $this->nombre = $array['nombre'];
+    $this->ip_address = $array['ip_address'];
+    $this->modelo = $array['modelo'];
+    $this->proveedor = $array['proveedor'];
+  } 
 
   private static function run_query($sql,$params = array())
 
@@ -69,5 +78,21 @@ class Dispositivo extends CI_Model
 
   private static $queries = array(
     'all' => 'SELECT id,nombre,ip_address,modelo,proveedor FROM dispositivos',
+    'find' => 'SELECT id,nombre,ip_address,modelo,proveedor FROM dispositivos WHERE id = ?',
   );
+
+  public static function find($id)
+  {
+    $sql = self::$queries['find']; 
+    $results = self::run_query($sql,array($id));
+    if( count($results) == 0)
+      return false;
+    else
+    {
+      $object = new Dispositivo();
+      $object->load_by_array($results[0]);
+      return $object;
+    }
+  }
+
 }
