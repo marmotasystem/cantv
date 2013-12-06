@@ -11,7 +11,7 @@ class Dispositivos extends CI_Controller
   public function index()
   {
     $data = array(
-      'dispositivo' => Dispositivo::all(),
+      'dispositivos' => Dispositivo::all(),
       'vista' => 'dispositivo/index'
     );
     $this->load->view('layout',$data);
@@ -51,6 +51,5 @@ class Dispositivos extends CI_Controller
     redirect('dispositivos/index');
   }
 
-
-  
+ 
 }
