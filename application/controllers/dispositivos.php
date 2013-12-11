@@ -44,7 +44,7 @@ class Dispositivos extends CI_Controller
 
   public function actualizar()
   {
-    $datos = $this->input->post('dispositivos');
+    $datos = $this->input->post('dispositivo');
     $dispositivo = Dispositivo::actualizar($datos);
     redirect('dispositivos/index');
   }

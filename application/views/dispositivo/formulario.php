@@ -5,25 +5,25 @@
 
     <div>
       <label>Direccion IP:
-        <input id="ip_address" type="text" name="dispositivos[ip_address]" placeholder="Ingrese Direccion IP..." required value="<?= $dispositivo->ip_address?>">
+        <input id="ip_address" type="text" name="dispositivo[ip_address]" placeholder="Ingrese Direccion IP..." required value="<?= $dispositivo->ip_address?>">
       </label>
     </div>
 
     <div>
       <label>Dispositivo:
-        <input id="nombre" type="text" name="dispositivos[nombre]" placeholder="Ingrese Nombre..." required value="<?= $dispositivo->nombre?>">
+        <input id="nombre" type="text" name="dispositivo[nombre]" placeholder="Ingrese Nombre..." required value="<?= $dispositivo->nombre?>">
       </label>
     </div>
 
     <div>
       <label>Modelo:
-        <input id="modelo" type="text" name="dispositivos[modelo]" placeholder="Ingrese Modelo..." required value="<?= $dispositivo->modelo?>">
+        <input id="modelo" type="text" name="dispositivo[modelo]" placeholder="Ingrese Modelo..." required value="<?= $dispositivo->modelo?>">
       </label>
     </div>
 
     <div>
       <label>Proveedor:
-        <input id="proveedor" type="text" name="dispositivos[proveedor]" placeholder="Ingrese Proveedor..." required value="<?= $dispositivo->proveedor?>">
+        <input id="proveedor" type="text" name="dispositivo[proveedor]" placeholder="Ingrese Proveedor..." required value="<?= $dispositivo->proveedor?>">
       </label>
     </div>
 
