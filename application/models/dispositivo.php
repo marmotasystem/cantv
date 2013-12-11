@@ -40,7 +40,7 @@ class Dispositivo extends CI_Model
       $results_objects[] = $object;
     }
     return $results_objects;
-    }
+  }
 
  // METODOS MAGICOS
 
@@ -58,6 +58,7 @@ class Dispositivo extends CI_Model
   }
 
   private function load_by_array($array){
+    $this->id = $array['id'];
     $this->nombre = $array['nombre'];
     $this->ip_address = $array['ip_address'];
     $this->modelo = $array['modelo'];

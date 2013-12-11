@@ -21,7 +21,6 @@ class Dispositivos extends CI_Controller
   {
     $data = array(
       'vista' => 'dispositivo/nuevo',
-     // 'estados' => Estado::all_array(),
       'dispositivo' => new Dispositivo()
     );
     $this->load->view('layout',$data);
@@ -37,8 +36,7 @@ class Dispositivos extends CI_Controller
   public function editar($id)
   {
     $data = array(
-      'vista' => 'dispostivo/editar',
-      //'estados' => Estado::all_array(),
+      'vista' => 'dispositivo/editar',
       'dispositivo' => Dispositivo::find($id)
     );
     $this->load->view('layout',$data);

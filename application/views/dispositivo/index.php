@@ -1,3 +1,4 @@
+<? print_r($dispositivos[0]); ?>
 <h1>
   Listado de Dispositivos
 </h1>
