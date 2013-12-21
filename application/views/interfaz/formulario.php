@@ -1,5 +1,5 @@
 <?php $accion = ( $interfaz->id != null )? 'actualizar' : 'create' ?>
-<?= form_open('interfaces/'.$accion,'',array('interfaces[id]'=>$interfaz->id));?>    
+<?= form_open('interfaz/'.$accion,'',array('interfaces[id]'=>$interfaz->id));?>    
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
     <div>      
@@ -52,7 +52,7 @@
 
     <div>    
       <label>Velocidad Logica:
-        <input id="bw" type="text" name="interfaces[bw]" placeholder="Ingrese Informacion..." required value="<?= $interfaces->bw>">
+        <input id="bw" type="text" name="interfaces[bw]" placeholder="Ingrese Informacion..." required value="<?= $interfaces->bw?>">
       </label>
     </div>
 

@@ -65,9 +65,27 @@ class Dispositivo extends CI_Model
     $this->proveedor = $array['proveedor'];
   } 
 
-  private static function run_query($sql,$params = array())
-
+  // Consulta en la base de datos, y retorna un array con el formato 'id' => 'nombre'
+  public static function all_array()
   {
+    $sql = self::$queries['all'];
+    $array = self::run_query($sql);
+    return self::compress_array($array,'id','nombre');
+  }
+ 
+  // 'convierte los queries de la bd a formato 'id' => 'nombre'
+  private static function compress_array($array,$key,$value){
+    $result = array();
+    foreach ($array as $ar) {
+      $result[$ar[$key]] = $ar[$value];
+    }
+    return $result;
+  }
+  
+  // $params esta inicializado por defecto con un array vacio
+  // Esto con el fin de que el metodo pueda ser llamado.
+  // con un unico parametro
+  private static function run_query($sql,$params = array()){
     $query = self::$db->query($sql,$params);
     $results = array();
     foreach ($query->result_array() as $row)
