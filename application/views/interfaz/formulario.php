@@ -1,10 +1,10 @@
-<?php $accion = ( $interfaz->id != null )? 'actualizar' : 'create' ?>
-<?= form_open('interfaz/'.$accion,'',array('interfaces[id]'=>$interfaz->id));?>    
+<?php $accion = ( $interfaces->id != null )? 'actualizar' : 'create' ?>
+<?= form_open('interfaces/'.$accion,'',array('interfaces[id]'=>$interfaces->id));?>    
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
     <div>      
       <label>Dispositivos: </br>
-        <?= form_dropdown('[dispositivos_id]', $dispositivos,$interfaz->dispositivos_id);?>
+        <?= form_dropdown('[dispositivos_id]', $dispositivos,$interfaces->dispositivos_id);?>
       </label>
     </div>      
 
