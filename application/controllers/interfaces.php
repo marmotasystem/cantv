@@ -20,7 +20,7 @@ class Interfaces extends CI_Controller
   {
     $data = array(
       'vista' => 'interfaz/nuevo',
-      'dispositivo' => Dispositivo::all_array(),
+      'dispositivos' => Dispositivo::all_array(),
       'interfaces' => new Interfaz()
     );
     $this->load->view('layout',$data);
