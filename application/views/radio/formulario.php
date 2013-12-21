@@ -10,18 +10,17 @@
   </head>
   <body>
     
-    <?php echo form_open('interfaces/create');?>
+    <?php echo form_open('radios/create');?>
     
-      <h2>Formulario de Registro Interfaz</h2>
+      <h2>Formulario de Registro Radio</h2>
 
       <fieldset width="75%">
     
         <legend>Introduzca los Datos</legend>
 
         <div>      
-        <br> <label>Interfaz: </br>
-          <input  id="descrpcion" type="text" name="interfaz[descripcion]"
-                  placeholder="Ingrese Descripcion..."
+        <br> <label>Radio: </br>
+          <input  id="nom_radio" type="text" name="radio[radio]" placeholder="Ingrese Nombre..."
                   required size="50">
           </label>
         </div>
@@ -29,7 +28,7 @@
         <div>
         <br><input type="submit" value="Enviar Datos"></br>
         </div>
-
+         
       </fieldset> 
 
   </body>

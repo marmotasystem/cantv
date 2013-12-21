@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class='container'>
+      <?= img('img/cabezal_b.gif')?>
       <nav>
         <ul class="nav nav-tabs">
           <li>
@@ -27,10 +28,20 @@
             </ul>  
           </li>
           <li>
-           <?=  anchor('interfaces/nuevo', 'Interfaces');?>
+           <?=  anchor('#', 'Interfaces',array('class'=>'dropdown-toggle',"data-toggle"=>"dropdown"));?>
+           <ul class="dropdown-menu">
+              <li> <?=  anchor('Interfaces', 'Listar');?> </li>
+              <li> <?=  anchor('Interfaces/nuevo', 'Nuevo');?> </li>
+            </ul>  
           </li>
-        </ul>
-      </nav>
+          <li>
+           <?=  anchor('#', 'Radios',array('class'=>'dropdown-toggle',"data-toggle"=>"dropdown"));?>
+           <ul class="dropdown-menu">
+              <li> <?=  anchor('Radios', 'Listar');?> </li>
+              <li> <?=  anchor('Radios/nuevo', 'Nuevo');?> </li>
+            </ul>  
+          </li>
+       </nav>
       <?php include($vista.'.php'); ?>
     </div>
   </body>
