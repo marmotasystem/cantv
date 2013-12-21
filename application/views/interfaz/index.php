@@ -1,3 +1,4 @@
+<?= print_r($interfaces);?>
 <h1>
   Listado de Interfaz
 </h1>
@@ -19,10 +20,10 @@
   <tbody>
     <? foreach ($interfaces as $interfaz) : ?>
       <tr>
-        <td> <?= $interfaz->dispositivo() ?></td>
+        <td> <?= $interfaz->dispositivo() ?> </td>
         <td> <?= $interfaz->ip ?> </td>
         <td> <?= $interfaz->tipo ?></td>
-        <td> <?= $interzas->numero ?> </td>
+        <td> <?= $interfaz->numero ?> </td>
         <td> <?= $interfaz->nombre ?></td>
         <td> <?= $interfaz->trafico ?> </td>
         <td> <?= $interfaz->descripcion ?></td>

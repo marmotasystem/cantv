@@ -58,17 +58,25 @@ class Interfaz extends CI_Model
 
   public function __set($name, $value)
   {
-    $this->atributos[$name] = $value;
+    $this->atributos[$name] = $value;    
   }
   public function __get($name)
   {
-    return $this->atributos[$name];
+    return $this->atributos[$name];    
   }
 
-  private function load_by_array($array){
-    $this->nombre = $array['nombre'];
+    private function load_by_array($array){
     $this->id = $array['id'];
     $this->dispositivos_id = $array['dispositivos_id'];
+    $this->ip = $array['ip'];
+    $this->tipo = $array['tipo'];
+    $this->numero = $array['numero'];
+    $this->nombre= $array['nombre'];
+    $this->trafico = $array['trafico'];
+    $this->descripcion = $array['descripcion'];
+    $this->speed = $array['speed'];
+    $this->bw = $array['bw'];
+
   } 
   private static function compress_array($array,$key,$value){
     $result = array();

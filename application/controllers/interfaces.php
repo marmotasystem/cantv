@@ -28,8 +28,8 @@ class Interfaces extends CI_Controller
 
   public function create()
   {
-    $datos = $this->input->post('interfaz');
-    $interfaz = Interfaz::create($datos);
+    $datos = $this->input->post('interfaces');
+    $interfaces = Interfaz::create($datos);
     redirect('interfaces/index');
   }
 
