@@ -3,7 +3,7 @@
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
     <div>      
-      <label>Estado: </br>
+      <label>Localidad: </br>
         <?= form_dropdown('radios[localidad_id]', $localidades,$radio->localidad_id);?>
       </label>
     </div>      

@@ -66,9 +66,9 @@ class Radio extends CI_Model
   }
 
   private function load_by_array($array){
-    $this->nombre = $array['nombre'];
     $this->id = $array['id'];
     $this->localidad_id = $array['localidad_id'];
+    $this->nombre = $array['nombre'];
   } 
   private static function compress_array($array,$key,$value){
     $result = array();
@@ -89,8 +89,8 @@ class Radio extends CI_Model
   }
 
   private static $queries = array(
-    'all' => 'SELECT id,nombre,localidad_id FROM radios',
-    'find' => 'SELECT id,nombre,localidad_id FROM radios WHERE id = ?'
+    'all' => 'SELECT id,localidad_id,nombre FROM radios',
+    'find' => 'SELECT id,localidad_id,nombre FROM radios WHERE id = ?'
   );
 
   public static function find($id){
