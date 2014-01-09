@@ -88,6 +88,12 @@ class Localidad extends CI_Model
     return $results;
   }
 
+   public function __toString()
+  {
+    return $this->atributos['nombre'];
+  }
+
+
   private static $queries = array(
     'all' => 'SELECT id,nombre,estado_id FROM localidades',
     'find' => 'SELECT id,nombre,estado_id FROM localidades WHERE id = ?'

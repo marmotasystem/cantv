@@ -4,16 +4,16 @@
 <table class='table'>
   <thead>
     <tr>
-      <th>Nombre </th>
       <th>Localidad </th>
+      <th>Nombre </th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <? foreach ($radios as $radio) : ?>
+    <? foreach ($radio as $radio) : ?>
       <tr>
+        <td> <?= $radio->localidad() ?></td>
         <td> <?= $radio->nombre ?></td>
-        <td> <?= $radio->localidad() ?> </td>
         <td> <?= anchor('radios/editar/'.$radio->id, "Editar"); ?> </td>
       </tr>
     <? endforeach ?>

@@ -11,7 +11,7 @@ class Radios extends CI_Controller
   public function index(){
     $data = array(
       'radio' => Radio::all(),
-      'vista' => 'radios/index'
+      'vista' => 'radio/index'
     );
     $this->load->view('layout',$data);
   }

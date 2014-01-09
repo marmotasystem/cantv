@@ -4,12 +4,12 @@
     <legend>Introduzca los Datos</legend>
     <div>      
       <label>Localidad: </br>
-        <?= form_dropdown('radios[localidad_id]', $localidades,$radio->localidad_id);?>
+        <?= form_dropdown('radio[localidad_id]', $localidades,$radio->localidad_id);?>
       </label>
     </div>      
     <div>    
       <label>Radio
-        <input id="nombre" type="text" name="radios[nombre]" placeholder="Ingrese Nombre..." required value="<?= $radio->nombre?>">
+        <input id="nombre" type="text" name="radio[nombre]" placeholder="Ingrese Nombre..." required value="<?= $radio->nombre?>">
       </label>
     </div>
     <div>
