@@ -65,7 +65,7 @@ class Interfaz extends CI_Model
     return $this->atributos[$name];    
   }
 
-    private function load_by_array($array){
+  private function load_by_array($array){
     $this->id = $array['id'];
     $this->dispositivos_id = $array['dispositivos_id'];
     $this->ip = $array['ip'];

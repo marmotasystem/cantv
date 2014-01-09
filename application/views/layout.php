@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?=base_url()?>css/bootstrap.min.css">
+
   </head>
   <body>
     <div class='container'>
@@ -43,6 +44,8 @@
           </li>
        </nav>
       <?php include($vista.'.php'); ?>
+      <?= img('img/pie_pagina.gif')?>
     </div>
   </body>
+  
 </html>

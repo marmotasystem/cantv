@@ -1,6 +1,5 @@
-<?= print_r($interfaces);?>
 <h1>
-  Listado de Interfaz
+  Listado de Interfaces
 </h1>
 <table class='table'>
   <thead>

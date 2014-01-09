@@ -57,6 +57,11 @@ class Dispositivo extends CI_Model
       return null;
   }
 
+  public function __toString()
+  {
+    return $this->atributos['nombre'];
+  }
+
   private function load_by_array($array){
     $this->id = $array['id'];
     $this->nombre = $array['nombre'];
