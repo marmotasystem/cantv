@@ -15,7 +15,7 @@
         <td> <?= $radio->localidad() ?></td>
         <td> <?= $radio->nombre ?></td>
         <td> <?= anchor('radios/editar/'.$radio->id, "Editar"); ?> </td>
-        <td> <?= anchor('radios/enlaces/'.$radio->id, "Enlaces"); ?> </td>
+        <td> <?= anchor('radios/interfaces/'.$radio->id, "Interfaces"); ?> </td>
       </tr>
     <? endforeach ?>
   </tbody>
