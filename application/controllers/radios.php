@@ -50,5 +50,10 @@ class Radios extends CI_Controller
     redirect('radios/index');
   }
 
+  public function interfaces($id)
+  {
+    
+  }
+
   
 }

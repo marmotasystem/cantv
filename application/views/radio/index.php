@@ -1,6 +1,6 @@
-<h1>
-  Listado de Radios
-</h1>
+<h2>
+ Listado de Radios 
+</h2>
 <table class='table'>
   <thead>
     <tr>
@@ -20,3 +20,5 @@
     <? endforeach ?>
   </tbody>
 </table>
+<br>
+<p align="right"><a href= "http://localhost/proyecto_cantv/index.php"> Volver a la Pagina Principal</a></br><br>

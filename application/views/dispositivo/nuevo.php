@@ -1,5 +1,5 @@
-<h1>
+<h2>
   Creacion de nuevo Dispositivo
-</h1>
+</h2>
 
 <? include('formulario.php') ?>

@@ -1,5 +1,5 @@
-<h1>
+<h2>
   Editar Interfaz
-</h1>
+</h2>
 
 <? include('formulario.php') ?>

@@ -13,7 +13,8 @@
       </label>
     </div>
     <div>
-      <br><input class='btn btn-success' type="submit" value="Enviar Datos"></br>
+      <br><input class='btn btn-success' type="submit" value="Enviar Datos">
+      <input class='btn btn-success' type="reset" value="Borrar Datos"></br>
     </div>
   </fieldset> 
 </form>

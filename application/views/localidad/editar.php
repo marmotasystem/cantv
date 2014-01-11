@@ -1,5 +1,5 @@
-<h1>
+<h2>
   Editar Localidad
-</h1>
+</h2>
 
 <? include('formulario.php') ?>
