@@ -16,14 +16,9 @@
 <h4><center><font color="Blue">Interfaces - Dispositivos NGN/MetroEthernet/ABA</font></center></h4>
 </br>
 <center><TABLE BORDER=1 WIDTH=500>
-
-<td WIDTH=100><?= img('img/logo.gif')?></td>
-
-<td WIDTH=100><?= img('img/logo_aba.gif')?></td>
-
-<td WIDTH=100><?= img('img/logo_metro.gif')?></td>
-
-<td WIDTH=100><?= img('img/logo_cgprd.gif')?></td>
-
+	<td WIDTH=100><?= img('img/logo.gif')?></td>
+	<td WIDTH=100><?= img('img/logo_aba.gif')?></td>
+	<td WIDTH=100><?= img('img/logo_metro.gif')?></td>
+	<td WIDTH=100><?= img('img/logo_cgprd.gif')?></td>
 </table></center></br>
 
