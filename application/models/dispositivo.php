@@ -102,7 +102,7 @@ class Dispositivo extends CI_Model
 
   private static $queries = array(
     'all' => 'SELECT id,nombre,ip_address,modelo,proveedor FROM dispositivos',
-    'find' => 'SELECT id,nombre,ip_address,modelo,proveedor FROM dispositivos WHERE id = ?',
+    'find' => 'SELECT id,nombre,ip_address,modelo,proveedor FROM dispositivos WHERE id = ?'
   );
 
   public static function find($id)

@@ -16,5 +16,7 @@
       <br><input class='btn btn-success' type="submit" value="Enviar Datos">
       <input class='btn btn-success' type="reset" value="Borrar Datos"></br>
     </div>
+    <br>
+      <p align="right"><a href= "http://localhost/proyecto_cantv/index.php"> Volver a la Pagina Principal</a></br>
   </fieldset> 
 </form>
