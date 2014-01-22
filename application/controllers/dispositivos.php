@@ -28,7 +28,7 @@ class Dispositivos extends CI_Controller
 
   public function create()
   {
-    $datos = $this->input->post('dispositivos');
+    $datos = $this->input->post('dispositivo');
     $dispositivo = Dispositivo::create($datos);
     redirect('dispositivos/index');
   }

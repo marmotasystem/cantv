@@ -43,6 +43,12 @@
               <li> <?=  anchor('Radios/nuevo', 'Nuevo');?> </li>
             </ul>  
           </li>
+          <li>
+           <?=  anchor('#','Documentación',array('class'=>'dropdown-toggle',"data-toggle"=>"dropdown"));?>
+           <ul class="dropdown-menu">
+              
+            </ul>  
+          </li>
        </nav>
       <?php include($vista.'.php'); ?>
       <?= img('img/pie_pagina.gif')?>
