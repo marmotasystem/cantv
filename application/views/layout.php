@@ -46,6 +46,7 @@
           <li>
            <?=  anchor('#','Documentación',array('class'=>'dropdown-toggle',"data-toggle"=>"dropdown"));?>
            <ul class="dropdown-menu">
+              <li> <?=  anchor('documentacion', 'Listar');?> </li>
               
             </ul>  
           </li>

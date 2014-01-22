@@ -24,6 +24,12 @@ class Welcome extends CI_Controller {
     	);
 	    $this->load->view('layout',$data);
 	}
+
+	public function documentacion()
+	{
+    	$data = array('vista' => 'documentacion');
+	}
+
 }
 
 /* End of file welcome.php */

@@ -4,7 +4,7 @@
     <legend>Introduzca los Datos</legend>
     <div>      
       <label>Dispositivos: </br>
-        <?= form_dropdown('[dispositivos_id]', $dispositivos,$interfaces->dispositivos_id);?>
+        <?= form_dropdown("interfaces[dispositivos_id]", $dispositivos,$interfaces->dispositivos_id);?>
       </label>
     </div>      
 
