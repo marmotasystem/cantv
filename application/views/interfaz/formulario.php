@@ -1,4 +1,4 @@
-<?php $accion = ( $interfaces->id != null )? 'actualizar' : 'create' ?>
+<?php $accion = ( $interfaces->id != null )? 'actualizar' : 'create' : 'eliminar'?>
 <?= form_open('interfaces/'.$accion,'',array('interfaces[id]'=>$interfaces->id));?>    
   <fieldset width="80%">
     <legend>Introduzca los Datos</legend>
