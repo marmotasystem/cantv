@@ -38,14 +38,14 @@ class Interfaces extends CI_Controller
     $data = array(
       'vista' => 'interfaz/editar',
       'dispositivos' => Dispositivo::all_array(),
-      'interfaz' => Interfaz::find($id)
+      'interfaces' => Interfaz::find($id)
     );
     $this->load->view('layout',$data);
   }
 
   public function actualizar()
   {
-    $datos = $this->input->post('interfaz');
+    $datos = $this->input->post('interfaces');
     $interfaz = Interfaz::actualizar($datos);
     redirect('interfaces/index');
   }
