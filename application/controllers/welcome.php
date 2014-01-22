@@ -28,6 +28,8 @@ class Welcome extends CI_Controller {
 	public function documentacion()
 	{
     	$data = array('vista' => 'documentacion');
+
+    	$this->load->view('layout',$data);
 	}
 
 }
